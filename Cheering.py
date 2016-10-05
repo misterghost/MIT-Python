@@ -19,3 +19,4 @@ while i < len(word):
 print("What does that spell ???")
 for i in range(times):
     print(word + "!!!")
+#test
