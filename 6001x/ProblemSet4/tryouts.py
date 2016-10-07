@@ -65,27 +65,71 @@ Created on Wed Oct  5 18:29:39 2016
 #print(hand2)
 
 
-def isvalidword(word, hand, wordList):
-    handCounter = hand.copy()
-#    if word in wordList:
-#        if len(word) > 0:
-#            for letter in word:
-#                if handCounter.get(letter,0) > 0:
-#                    handCounter[letter] -= 1
-#                    return True
-#                else:
-#                    return False
-#                    break
-#    else:
+#def isvalidword(word, hand, wordList):
+#    handCounter = hand.copy()
+#    for letter in word:
+#        if handCounter.get(letter,0) > 0:
+#            handCounter[letter] -= 1
+#        else:
+#            return False
+#    if word not in wordList:
 #        return False
-    for letter in word:
-        if handCounter.get(letter,0) > 0:
-            handCounter[letter] -= 1
-        else:
-            return False
-    if word not in wordList:
-        return False
-    return True
+#    return True
+
+
+
+def calculateHandlen(hand):
+    """ 
+    Returns the length (number of letters) in the current hand.
+    
+    hand: dictionary (string-> int)
+    returns: integer
+    """
+    # TO DO... <-- Remove this comment when you code
+
+
+    #x = hand.values()
+    return sum(hand.values())
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
 
 
