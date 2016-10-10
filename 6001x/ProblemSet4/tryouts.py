@@ -78,19 +78,59 @@ Created on Wed Oct  5 18:29:39 2016
 
 
 
-def calculateHandlen(hand):
-    """ 
-    Returns the length (number of letters) in the current hand.
+#def calculateHandlen(hand):
+#    """ 
+#    Returns the length (number of letters) in the current hand.
+#    
+#    hand: dictionary (string-> int)
+#    returns: integer
+#    """
+#
+#    return sum(hand.values())
     
-    hand: dictionary (string-> int)
-    returns: integer
-    """
-    # TO DO... <-- Remove this comment when you code
 
 
-    #x = hand.values()
-    return sum(hand.values())
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
