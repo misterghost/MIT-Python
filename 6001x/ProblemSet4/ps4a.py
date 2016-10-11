@@ -233,7 +233,6 @@ def playHand(hand, wordList, n):
             score = score + getWordScore(word, n)
             print('"',word,'"', 'earned', getWordScore(word, n), 'points.', 'Total:', score, 'points.')
             newhand = updateHand(newhand, word)
-            handLength = calculateHandlen(newhand)
         
 
             

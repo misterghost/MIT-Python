@@ -327,58 +327,27 @@ def playHand(hand, wordList, n):
       n: integer (HAND_SIZE; i.e., hand size required for additional points)
       
     """
- # Keep track of the total score 
     score = 0
-    #handLength = calculateHandlen(hand)
     newhand = hand.copy()
-    # As long as there are still letters left in the hand:
     while calculateHandlen(newhand) >= 0:
         if calculateHandlen(newhand) == 0:
             print('Run out of letters. Total score:', score, 'points')
             break
-        # Display the hand
         print('Current Hand: ', end ='') 
         displayHand(newhand)
-            # Ask user for input
         word = input('Enter word, or a "." to indicate that you are finished: ')
-            # If the input is a single period:
         if word == ".":
-                # End the game (break out of the loop)
             print("Goodbye! Total score: ",score,"points")  
             break
-            # Otherwise (the input is not a single period):
         elif isValidWord(word, newhand, wordList) == False:
-                    # Reject invalid word (print a message followed by a blank line)
             print('Invalid Word, please try again.')
             print('')
-                # Otherwise (the word is valid):
         else:
-                    # Tell the user how many points the word earned, and the updated total score, in one line followed by a blank line
-                #hand = updateHand(hand, word)
             score = score + getWordScore(word, n)
             print('"',word,'"', 'earned', getWordScore(word, n), 'points.', 'Total:', score, 'points.')
             newhand = updateHand(newhand, word)
-            #print('new hand is:', newhand)
-            handLength = calculateHandlen(newhand)
 
-                #print('handlength is: ' , handLength)
-                    #ran out of letters
-                #if handLength == 0:
-                    #print('Run out of letters. Total score:', score, 'points')
-                    #hand = updateHand(hand, word)
-                    #break
-            # Update the hand 
-                #else:
-                    #break
-                    #print("Goodbye! Total score: ",score,"points")    
-                    #hand = updateHand(hand, word)
-                    
-    # Game is over (user entered a '.' or ran out of letters), so tell user the total score
-    #if handLength == 0:
-        #print('Run out of letters. Total score:', score, 'points')
-    #else:
-        #print("Goodbye! Total score: ",score,"points")    
-    
+
     
     
     
