@@ -348,40 +348,13 @@ def playHand(hand, wordList, n):
             newhand = updateHand(newhand, word)
 
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-        
+#2222222222222222222222222222222222222222222222222222222222222222222222222222
+#3333333333333333333333333333333333333333333333333333333333333333333333333333
+#4444444444444444444444444444444444444444444444444444444444444444444444444444
 
-#
-# Problem #5: Playing a game
-# 
+    
+ 
+
 
 def playGame(wordList):
     """
@@ -395,10 +368,23 @@ def playGame(wordList):
  
     2) When done playing the hand, repeat from step 1    
     """
-    # TO DO ... <-- Remove this comment when you code this function
-    print("playGame not yet implemented.") # <-- Remove this line when you code the function
-   
-
+    user_selection = None
+    while True:
+        user_selection = input('Enter n to deal a new hand, r to replay the last hand, or e to end game: ')
+        if user_selection == 'n':
+            player_hand = dealHand(HAND_SIZE)
+            playHand(player_hand.copy(), wordList, HAND_SIZE)
+            print()
+        elif user_selection == 'r':
+            try:
+                playHand(player_hand.copy(), wordList, HAND_SIZE)
+            except:
+                print('You have not played a hand yet. Please play a new hand first!')
+        elif user_selection == 'e':
+            break
+        else:    
+            print('Invalid command.')
+        
 
 
 #
