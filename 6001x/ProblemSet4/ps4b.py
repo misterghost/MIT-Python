@@ -124,11 +124,79 @@ def playGame(wordList):
 
     wordList: list (string)
     """
-    # TO DO... <-- Remove this comment when you code this function
-    print("playGame not yet implemented.") # <-- Remove this when you code this function
+    hand = None
+    while True:
+        user_selection = input('Enter n to deal a new hand, r to replay the last hand, or e to end game: ')
+        if user_selection == 'e':
+            break
+        else:
+            if user_selection == 'n':
+                hand = dealHand(HAND_SIZE)
+                while True:
+                    user_selection_2 = input('Enter u to have yourself play, c to have the computer play: ')
+                    if user_selection_2 == 'u':
+                        playHand(hand, wordList, HAND_SIZE)
+                        print('')
+                        break
+                    elif user_selection_2 == 'c':                
+                        compPlayHand(hand, wordList, HAND_SIZE)
+                        print('')
+                        break
+                    else: 
+                        print('Invalid command.')
+                        #user_selection_2 = input('Enter u to have yourself play, c to have the computer play: ')
+                
+            elif user_selection == 'r':         
+                if hand == None:
+                    print('You have not played a hand yet. Please play a new hand first!')
+                else:
+                    user_selection_2 = input('Enter u to have yourself play, c to have the computer play: ')
+                    if user_selection_2 == 'u':
+                        playHand(hand, wordList, HAND_SIZE)
+                        print('')
+                    elif user_selection_2 == 'c':                
+                        compPlayHand(hand, wordList, HAND_SIZE)
+                        print('')
+                    else: 
+                        print('Invalid command.')
+                        
+            else: 
+                print('Invalid command.')  
+                print('')                       
 
-        
-#
+          
+                        
+                        
+          
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
 # Build data structures used for entire session and play game
 #
 if __name__ == '__main__':
