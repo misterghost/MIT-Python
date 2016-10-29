@@ -14,24 +14,24 @@ def convert_to_mandarin(us_num):
     translation = {'0':'ling', '1':'yi', '2':'er', '3':'san', '4': 'si',
           '5':'wu', '6':'liu', '7':'qi', '8':'ba', '9':'jiu', '10': 'shi'}
           
-    if us_num == 10:
+    if int(us_num) == 10:
         print('shi')
-    elif us_num < 10:
+    elif int(us_num) < 10:
         x = translation.get(str(us_num))
         print(x)
        
-    elif us_num > 10 and us_num < 20:
+    elif int(us_num) > 10 and int(us_num) < 20:
         for i in str(us_num):
             x = translation.get(i)
-        print('shi', x)
+        print('shi' + ' ' +  x)
            
-    elif us_num > 19:
+    elif int(us_num) > 19:
         x = translation.get(str(us_num)[:1])
         y = translation.get(str(us_num)[1:])
         if y == 'ling':
-            print(x, 'shi')
+            print(x + ' ' + 'shi')
         else:
-            print(x, 'shi', y)
+            print(x + ' ' + 'shi' + ' ' +  y)
             
         
             
@@ -39,7 +39,7 @@ def convert_to_mandarin(us_num):
             
             
             
-            
+
         
         
         
