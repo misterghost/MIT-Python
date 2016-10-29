@@ -88,6 +88,34 @@ class Message(object):
         '''
         return self.valid_words[:]
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     def build_shift_dict(self, shift):
         '''
         Creates a dictionary that can be used to apply a cipher to a letter.
@@ -102,7 +130,48 @@ class Message(object):
         Returns: a dictionary mapping a letter (string) to 
                  another letter (string). 
         '''
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         pass #delete this line and replace with your code here
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 
     def apply_shift(self, shift):
         '''
