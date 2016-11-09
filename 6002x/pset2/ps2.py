@@ -76,6 +76,10 @@ class RectangularRoom(object):
         """
         self.width = width
         self.height = height
+        self.cleanTiles = {}
+        
+        
+        
     
     def cleanTileAtPosition(self, pos):
         """
@@ -88,7 +92,7 @@ class RectangularRoom(object):
 
 
 
-
+#checking branch.
 
 
 
